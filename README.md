@@ -15,8 +15,10 @@ Except, maybe there is a target near the main diagonal on the way.
 
 <figure>
   <img src="https://github.com/user-attachments/assets/c7c67e7c-081e-4e4f-830d-cc01f62b67d0" width="400" height="400">
+  <div style="text-align: center;">
   <figcaption>Figure 1</figcaption>
 </figure>
+<br/>
 
 
 
@@ -24,18 +26,21 @@ If there is another target at any of the pink spots, then player 1 can move to b
 
 <figure>
   <img src="https://github.com/user-attachments/assets/154541ff-90ed-4468-8a74-76e3d21c9c60" width="400" height="400">
+  <div style="text-align: center;">
   <figcaption>Figure 2</figcaption>
 </figure>
-
+<br/>
 If the target shown on the pink square is the nearest such target to the start among pink squares, and player 1 moves north with the idea to eventually move on to the target, now player 2 can regain a good position if there are any targets on the orange squares, by moving to that diagonal. (We know that the squares east of the pink squares are not targets, as we assumed that the original target in the top right of the diagram was the first on the main diagonal, so we do not have the same effect there.)
 
 This switching of control between the players can occur many times, but describes in full the behaviour of the game. We can set up an infinite series to find player 1's probability of winning. We will solve the game both on a complete 2D "lattice" (grid) and on the half-lattice "wedge" shown below, only containing the squares where x ≥ y.
 
 <figure>
   <img src="https://github.com/user-attachments/assets/f16106a0-1c57-4ebb-a308-0d01ee8f1a11" width="400" height="400">
+  <div style="text-align: center;">
   <figcaption>Figure 3</figcaption>
 </figure>
-
+<br/>
+    
 ## Formula for player 1's winning probability
 
 <b>This section is more mathematically intensive - feel free to skip, this just explains how the program derives the probability.</b>
@@ -80,21 +85,27 @@ Here, you can see the results!
 
 <figure>
   <img src="https://github.com/user-attachments/assets/122be7a5-7ed4-4db5-9b0b-25060c9ff2c7">
+  <div style="text-align: center;">
   <figcaption>Figure 4: Player 1's probability of winning plotted against q in the wedge game.</figcaption>
 </figure>
+<br/>
 
 <figure>
   <img src="https://github.com/user-attachments/assets/8373de50-f138-47b2-b2fd-213e8cfd3150">
+  <div style="text-align: center;">
   <figcaption>Figure 5: Player 1's probability of winning plotted against q in the full grid game.</figcaption>
 </figure>
-
+<br/>
+    
 The program also allows you to perform a polynomial fit for the results using Numpy, for a specified degree polynomial.
 <figure>
   <img src="https://github.com/user-attachments/assets/90f85e09-700d-4256-a70f-18e533bae837">
+  <div style="text-align: center;">
   <figcaption>Figure 6: Degree 2 polynomial fit for the wedge case.</figcaption>
 </figure>
-
-The program also outputs its parameter estimates. In this case, the estimated polynomial is $y = 0.4367q^2 + 0.1904q + 0.3744.$
+<br/>
+    
+The program outputs its parameter estimates. In this case, the estimated polynomial is $y = 0.4367q^2 + 0.1904q + 0.3744.$
 
 ## References
 <a id="1">[1]</a> 
